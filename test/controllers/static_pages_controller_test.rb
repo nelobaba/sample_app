@@ -18,7 +18,7 @@ class StaticPagesControllerTest < ActionDispatch::IntegrationTest
     get static_pages_home_url #get a url, Home and Help pages are ordinary urls accessed via GET request. 
     assert_response :success #The abstract representation of of the underlying HTTP status code ie 200
     #the code above checks for the presence of a <title> tag containing the string “Home | Ruby on Rails Tutorial Sample App”
-    assert_select "title", "Home | #{@base_title}"
+    assert_select "title", "Ruby on Rails Tutorial Sample App"
   end
 
   test "should get help" do
